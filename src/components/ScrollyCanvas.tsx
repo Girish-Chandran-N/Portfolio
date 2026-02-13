@@ -44,9 +44,14 @@ export default function ScrollyCanvas() {
         const img = images[index];
 
         if (canvas.width !== window.innerWidth || canvas.height !== window.innerHeight) {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
+            canvas.width = window.innerWidth * window.devicePixelRatio;
+            canvas.height = window.innerHeight * window.devicePixelRatio;
+            ctx?.scale(window.devicePixelRatio, window.devicePixelRatio);
         }
+
+        // Adjust for device pixel ratio in calculations if needed, or just use css width/height
+        // The original code was fine but let's make sure it handles high DPI if we want sharpness. 
+        // For now, let's stick to the simple resizing but ensure style width/height is 100%
 
         const cw = canvas.width;
         const ch = canvas.height;

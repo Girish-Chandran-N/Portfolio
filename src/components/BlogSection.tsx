@@ -22,7 +22,7 @@ export default function BlogSection() {
                     <Link href="/blog" className="hidden md:block text-[#2B7FFF] border-b border-[#2B7FFF]/30 pb-1 hover:text-[#FF4A1C] hover:border-[#FF4A1C] transition-colors">View all posts</Link>
                 </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {posts.map((post, index) => (
                         <Link href={`/blog/${post.slug}`} key={index} className="block h-full">
                             <motion.article

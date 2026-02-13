@@ -35,13 +35,13 @@ export default function Overlay() {
             {/* Section 1: Name & Specialist Title */}
             <motion.div
                 style={{ opacity: opacity1, y: y1 }}
-                className="absolute w-full px-10 text-center top-[20%]"
+                className="absolute w-full px-6 md:px-10 text-center top-[20%]"
             >
-                <h1 className="text-5xl md:text-8xl font-bold tracking-tighter mb-6 text-white drop-shadow-2xl">
+                <h1 className="text-4xl md:text-8xl font-bold tracking-tighter mb-4 md:mb-6 text-white drop-shadow-2xl">
                     Girish Chandran Nalini
                 </h1>
-                <div className="inline-block px-6 py-2 border border-[#2B7FFF]/30 rounded-full bg-[#111827]/80 backdrop-blur-md shadow-[0_0_20px_rgba(43,127,255,0.2)]">
-                    <p className="text-xl md:text-3xl text-[#2B7FFF] font-light tracking-wide">
+                <div className="inline-block px-4 md:px-6 py-2 border border-[#2B7FFF]/30 rounded-full bg-[#111827]/80 backdrop-blur-md shadow-[0_0_20px_rgba(43,127,255,0.2)]">
+                    <p className="text-lg md:text-3xl text-[#2B7FFF] font-light tracking-wide">
                         Digital Marketing Specialist
                     </p>
                 </div>
@@ -50,10 +50,10 @@ export default function Overlay() {
             {/* Section 2: MBA (Pushed Far Left) */}
             <motion.div
                 style={{ opacity: opacity2, y: y2 }}
-                className="absolute w-full px-10 text-left top-[35%]"
+                className="absolute w-full px-6 md:px-10 text-center md:text-left top-[30%] md:top-[35%]"
             >
-                <div className="md:ml-20 max-w-2xl">
-                    <h2 className="text-4xl md:text-7xl font-bold text-white drop-shadow-lg leading-tight">
+                <div className="md:ml-20 max-w-2xl mx-auto md:mx-0">
+                    <h2 className="text-3xl md:text-7xl font-bold text-white drop-shadow-lg leading-tight">
                         Master of Business <br />
                         <span className="text-[#2B7FFF]">
                             Administration
@@ -65,16 +65,16 @@ export default function Overlay() {
             {/* Section 3: Experience (Pushed Far Right) */}
             <motion.div
                 style={{ opacity: opacity3, y: y3 }}
-                className="absolute w-full px-10 text-right top-[35%]"
+                className="absolute w-full px-6 md:px-10 text-center md:text-right top-[30%] md:top-[35%]"
             >
-                <div className="md:ml-auto md:mr-20 max-w-2xl">
-                    <h2 className="text-4xl md:text-7xl font-bold text-white drop-shadow-lg leading-tight mb-4">
+                <div className="md:ml-auto md:mr-20 max-w-2xl mx-auto md:mx-0">
+                    <h2 className="text-3xl md:text-7xl font-bold text-white drop-shadow-lg leading-tight mb-2 md:mb-4">
                         5 Years of <br />
                         <span className="text-[#FF4A1C]">
                             Experience
                         </span>
                     </h2>
-                    <p className="text-xl md:text-2xl text-gray-300 font-light italic">
+                    <p className="text-lg md:text-2xl text-gray-300 font-light italic">
                         in Digital Marketing & Strategy
                     </p>
                 </div>
@@ -83,10 +83,10 @@ export default function Overlay() {
             {/* Section 4: Strategy (Pushed Far Left) */}
             <motion.div
                 style={{ opacity: opacity4, y: y4 }}
-                className="absolute w-full px-10 text-left top-[40%]"
+                className="absolute w-full px-6 md:px-10 text-center md:text-left top-[35%] md:top-[40%]"
             >
-                <div className="md:ml-20">
-                    <h2 className="text-5xl md:text-8xl font-bold text-white drop-shadow-lg leading-none">
+                <div className="md:ml-20 mx-auto md:mx-0">
+                    <h2 className="text-4xl md:text-8xl font-bold text-white drop-shadow-lg leading-none">
                         Data-Driven <br />
                         <span className="text-[#2B7FFF]">
                             Startups
