@@ -6,14 +6,15 @@ export default function Overlay() {
     const { scrollYProgress } = useScroll();
 
     // Split into 4 sections (0-25%, 25-50%, 50-75%, 75-100%)
-    const opacity1 = useTransform(scrollYProgress, [0.05, 0.15, 0.20, 0.30], [0, 1, 1, 0]);
-    const y1 = useTransform(scrollYProgress, [0.05, 0.30], [50, -50]);
+    // Updated: Shifted earlier as requested
+    const opacity1 = useTransform(scrollYProgress, [0.02, 0.12, 0.18, 0.28], [0, 1, 1, 0]);
+    const y1 = useTransform(scrollYProgress, [0.02, 0.28], [50, -50]);
 
-    const opacity2 = useTransform(scrollYProgress, [0.30, 0.40, 0.45, 0.55], [0, 1, 1, 0]);
-    const y2 = useTransform(scrollYProgress, [0.30, 0.55], [50, -50]);
+    const opacity2 = useTransform(scrollYProgress, [0.25, 0.35, 0.42, 0.52], [0, 1, 1, 0]);
+    const y2 = useTransform(scrollYProgress, [0.25, 0.52], [50, -50]);
 
-    const opacity3 = useTransform(scrollYProgress, [0.55, 0.65, 0.70, 0.80], [0, 1, 1, 0]);
-    const y3 = useTransform(scrollYProgress, [0.55, 0.80], [50, -50]);
+    const opacity3 = useTransform(scrollYProgress, [0.52, 0.62, 0.70, 0.80], [0, 1, 1, 0]);
+    const y3 = useTransform(scrollYProgress, [0.52, 0.80], [50, -50]);
 
     const opacity4 = useTransform(scrollYProgress, [0.80, 0.90, 0.95, 0.98], [0, 1, 1, 0]);
     const y4 = useTransform(scrollYProgress, [0.80, 0.98], [50, -50]);
