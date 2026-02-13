@@ -5,19 +5,22 @@ import { motion, useScroll, useTransform } from "framer-motion";
 export default function Overlay() {
     const { scrollYProgress } = useScroll();
 
-    // Split into 4 sections (0-25%, 25-50%, 50-75%, 75-100%)
-    // Updated: Started Name immediately (0) and MBA very early (0.15)
-    const opacity1 = useTransform(scrollYProgress, [0, 0.1, 0.15, 0.25], [0, 1, 1, 0]);
-    const y1 = useTransform(scrollYProgress, [0, 0.25], [50, -50]);
+    // Split into 4 sections (Sequential, no overlap)
+    // 1. Name: 0 -> 0.18
+    const opacity1 = useTransform(scrollYProgress, [0, 0.08, 0.12, 0.18], [0, 1, 1, 0]);
+    const y1 = useTransform(scrollYProgress, [0, 0.18], [50, -50]);
 
-    const opacity2 = useTransform(scrollYProgress, [0.15, 0.25, 0.35, 0.45], [0, 1, 1, 0]);
-    const y2 = useTransform(scrollYProgress, [0.15, 0.45], [50, -50]);
+    // 2. MBA: 0.18 -> 0.40 (Starts after Name is gone)
+    const opacity2 = useTransform(scrollYProgress, [0.18, 0.25, 0.33, 0.40], [0, 1, 1, 0]);
+    const y2 = useTransform(scrollYProgress, [0.18, 0.40], [50, -50]);
 
-    const opacity3 = useTransform(scrollYProgress, [0.45, 0.55, 0.65, 0.75], [0, 1, 1, 0]);
-    const y3 = useTransform(scrollYProgress, [0.45, 0.75], [50, -50]);
+    // 3. Experience: 0.40 -> 0.70
+    const opacity3 = useTransform(scrollYProgress, [0.40, 0.48, 0.62, 0.70], [0, 1, 1, 0]);
+    const y3 = useTransform(scrollYProgress, [0.40, 0.70], [50, -50]);
 
-    const opacity4 = useTransform(scrollYProgress, [0.75, 0.85, 0.90, 0.98], [0, 1, 1, 0]);
-    const y4 = useTransform(scrollYProgress, [0.75, 0.98], [50, -50]);
+    // 4. Strategy: 0.70 -> 0.98
+    const opacity4 = useTransform(scrollYProgress, [0.70, 0.78, 0.90, 0.98], [0, 1, 1, 0]);
+    const y4 = useTransform(scrollYProgress, [0.70, 0.98], [50, -50]);
 
     return (
         <div className="fixed inset-0 pointer-events-none z-10 flex flex-col justify-center items-center">
